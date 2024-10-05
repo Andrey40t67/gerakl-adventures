@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подвиги Геракла</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f9f9f9, #e3e3e3);
+        }
+        header {
+            padding: 20px;
+            background-color: #ffcc00;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .section {
+            padding: 20px;
+            margin: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .story {
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .story:hover {
+            background-color: #f0f0f0;
+            transform: scale(1.02);
+        }
+        .details {
+            display: none;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+        /* Анимация */
+        .animate {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 0, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            animation: fadeIn 1s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Подвиги Геракла</h1>
+</header>
+
+<div id="alert-message" style="display:none; background-color: red; color: white; padding: 20px; text-align: center;">
+    Лана, хватит удалять админов! Это прикол. Сайт посвящается тебе и всем остальным!
+</div>
+
+<div class="container">
+    <div class="section">
+        <h2>Подвиги Геракла</h2>
+        <div class="story" onclick="toggleDetails(this)">
+            <strong>Подвиг 1:</strong>
+            <div class="details">
+                <p>Геракл решил избавиться от стереотипов и построить мост через реку из своих врагов. Все были в шоке!</p>
+                <button onclick="speak('Геракл решил избавиться от стереотипов и построить мост через реку из своих врагов. Все были в шоке!'); event.stopPropagation();">Озвучить для ленивых</button>
+            </div>
+        </div>
+        <div class="story" onclick="toggleDetails(this)">
+            <strong>Подвиг 2:</strong>
+            <div class="details">
+                <p>Геракл спустился в ад, чтобы вернуть свои игрушки, но заблудился в коридорах.</p>
+                <button onclick="speak('Геракл спустился в ад, чтобы вернуть свои игрушки, но заблудился в коридорах.'); event.stopPropagation();">Озвучить для ленивых</button>
+            </div>
+        </div>
+        <div class="story" onclick="toggleDetails(this)">
+            <strong>Подвиг 3:</strong>
+            <div class="details">
+                <p>Геракл сразился с Немейским Львом, но тот сдался, увидев его домашнее задание.</p>
+                <button onclick="speak('Геракл сразился с Немейским Львом, но тот сдался, увидев его домашнее задание.'); event.stopPropagation();">Озвучить для ленивых</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Школьные Истории</h2>
+        <div class="story" onclick="toggleDetails(this)">
+            <strong>Контрольная с закусками:</strong>
+            <div class="details">
+                <p>Наша классная команда, решив справиться с контрольной, собрала все сокровища: пиццу, чипсы и много кофе. В итоге, контрольная закончилась так же быстро, как и наш вечер.</p>
+                <button onclick="speak('Наша классная команда, решив справиться с контрольной, собрала все сокровища: пиццу, чипсы и много кофе. В итоге, контрольная закончилась так же быстро, как и наш вечер.'); event.stopPropagation();">Озвучить для ленивых</button>
+            </div>
+        </div>
+
+        <div class="story" onclick="toggleDetails(this)">
+            <strong>Наши попытки сбежать с урока:</strong>
+            <div class="details">
+                <p>Когда учитель отвернулся, мы решили, что это наш шанс. В итоге оказались за дверью с букетом цветной бумаги и вкусными конфетами.</p>
+                <button onclick="speak('Когда учитель отвернулся, мы решили, что это наш шанс. В итоге оказались за дверью с букетом цветной бумаги и вкусными конфетами.'); event.stopPropagation();">Озвучить для ленивых</button>
+            </div>
+        </div>
+
+        <div class="story" onclick="toggleDetails(this)">
+            <strong>Первый день в пятом классе:</strong>
+            <div class="details">
+                <p>Все волновались, но только не наш класс. Мы пришли с подругами и решили, что нам нужно покорить мир. Мы так и не поняли, что нас ждет впереди.</p>
+                <button onclick="speak('Все волновались, но только не наш класс. Мы пришли с подругами и решили, что нам нужно покорить мир. Мы так и не поняли, что нас ждет впереди.'); event.stopPropagation();">Озвучить для ленивых</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Все права защищены &copy; 2024</p>
+    <p>Сайт был создан Андреем Пашкевичем</p>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("alert-message").style.display = "block";
+    });
+
+    function toggleDetails(element) {
+        const details = element.querySelector('.details');
+        details.style.display = details.style.display === "block" ? "none" : "block";
+    }
+
+    function speak(text) {
+        const utterance = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(utterance);
+
+        // Показать анимацию при озвучивании
+        const animateDiv = document.createElement("div");
+        animateDiv.className = "animate";
+        animateDiv.innerText = "Сейчас озвучиваю...";
+        document.body.appendChild(animateDiv);
+
+        setTimeout(() => {
+            document.body.removeChild(animateDiv);
+        }, 2000);
+    }
+</script>
+
+</body>
+</html>
